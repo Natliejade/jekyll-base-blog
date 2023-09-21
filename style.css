@@ -1,17 +1,773 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+/*  NOTES */
 
-header,
-footer,
-section {
-    padding: 5%;
-}
+/* ------- Color Variables example -------- */
+/* :root {
+  --page-font: "Catamaran", sans-serif;
+  --dark: #192b37;
+  --featured: #ffbe00;
+  --light: #e3ecf2;
+  --image-background: rgb(240, 240, 240);
+  --featured-text: #ffbe00;
+  --light-text: #ffffff;
+  --dark-text: #192b37;
+  --quotes: rgb(120, 120, 125);
+} */
 
+/* Temp Styles */
 header,
 footer {
-    padding: 5%;
     background-color: lightblue;
+}
+
+.intro {
+    text-transform: uppercase;
+    background-color: lightblue;
+}
+
+.side-bar {
+    background-color: lightgrey;    
+}
+.back-button {
+    background-color: lightpink;   
+}
+
+.tag {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 0.1rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* ---------------------- Universal styles & Utility classes--------------*/
+/* CSS RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Univeral utility classes */
+
+/* --------------- Gridlex padding/margin reset */
+[class*="col-"],
+[class*="col_"],
+[class~="col"] {
+  padding: 0;
+}
+[class*="grid-"],
+[class*="grid_"],
+[class~="grid"] {
+  margin: 0;
+}
+
+/* ------------------- Padding Utility Classes */
+.padded {
+  padding: 0;
+}
+
+.padded-sm {
+  padding: 2.5%;
+}
+.padded-md {
+  padding: 5%;
+}
+.padded-lg {
+  padding: 10%;
+}
+
+.padded-05 {
+  padding: 0.5rem;
+}
+.padded-1 {
+  padding: 1rem;
+}
+.padded-2 {
+  padding: 2rem;
+}
+
+.padded-t {
+  padding-top: 5%;
+}
+.padded-b {
+  padding-bottom: 5%;
+}
+.padded-l {
+  padding-left: 5%;
+}
+.padded-r {
+  padding-right: 5%;
+}
+
+.padded-tb {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.padded-lr {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.padded-lr-md {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.padded-t-1 {
+  padding-top: 1rem;
+}
+.padded-b-1 {
+  padding-bottom: 1rem;
+}
+.padded-l-1 {
+  padding-left: 1rem;
+}
+.padded-r-1 {
+  padding-right: 1rem;
+}
+
+.padded-t-2 {
+  padding-top: 2rem;
+}
+.padded-b-2 {
+  padding-bottom: 2rem;
+}
+.padded-l-2 {
+  padding-left: 2rem;
+}
+.padded-r-2 {
+  padding-right: 2rem;
+}
+
+.padded-t-0 {
+  padding-top: 0;
+}
+.padded-b-0 {
+  padding-bottom: 0;
+}
+.padded-l-0 {
+  padding-left: 0;
+}
+.padded-r-0 {
+  padding-right: 0;
+}
+
+/* --------------- Margin Utility Classes */
+.margin-t {
+  margin-top: 5%;
+}
+.margin-b {
+  margin-bottom: 5%;
+}
+.margin-l {
+  margin-left: 5%;
+}
+.margin-r {
+  margin-right: 5%;
+}
+
+.margin-t-1 {
+  margin-top: 1rem;
+}
+.margin-b-1 {
+  margin-bottom: 1rem;
+}
+.margin-l-1 {
+  margin-left: 1rem;
+}
+.margin-r-1 {
+  margin-right: 1rem;
+}
+
+.margin-t-2 {
+  margin-top: 2rem;
+}
+.margin-b-2 {
+  margin-bottom: 2rem;
+}
+.margin-l-2 {
+  margin-left: 2rem;
+}
+.margin-r-2 {
+  margin-right: 2rem;
+}
+
+.margin-t-0 {
+  margin-top: 0;
+}
+.margin-b-0 {
+  margin-bottom: 0;
+}
+.margin-l-0 {
+  margin-left: 0;
+}
+.margin-r-0 {
+  margin-right: 0;
+}
+
+.margin-tb {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.margin-lr {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* ----------------- Height Utility Classes */
+
+.tall-50 {
+  min-height: 50vh;
+}
+.tall-60 {
+  min-height: 60vh;
+}
+.tall-70 {
+  min-height: 70vh;
+}
+.tall-80 {
+  min-height: 80vh;
+}
+.tall-90 {
+  min-height: 90vh;
+}
+.tall-100 {
+  min-height: 100vh;
+}
+
+/* Overriding negative space from any last text element */
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ------------- Image styles */
+.bg-image,
+[class*="bg-image"] {
+  background-color: lightgrey;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-dark {
+  background-color: ;
+  color: white;
+}
+
+.bg-featured {
+  background-color: );
+}
+
+.bg-light {
+  background-color: ;
+}
+
+.portrait-tall {
+  padding-bottom: 175%;
+}
+.portrait {
+  padding-bottom: 125%;
+}
+.square {
+  padding-bottom: 100%;
+}
+.landscape {
+  padding-bottom: 66%;
+}
+.landscape-wide {
+  padding-bottom: 56%;
+}
+.portrait-134 {
+  padding-bottom: 134.5%;
+}
+
+/* Background Position */
+.bg-pos-t {
+  background-position: top;
+}
+.bg-pos-b {
+  background-position: bottom;
+}
+.bg-pos-l {
+  background-position: left;
+}
+.bg-pos-r {
+  background-position: right;
+}
+
+/* Looks inside any element that has a class of gallery, for any class that includes col- (could be part or all of it), then applies the styles */
+.gallery [class*="col-"] {
+  padding: 0.7%;
+}
+
+/* -------------------------Typography Styles -----------------*/
+
+body {
+  font-family: "Catamaran", sans-serif;;
+  color: #192b37;
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+.justify {
+  text-align: justify;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.featured-text {
+  color: ;
+}
+.white-text {
+  color: white;
+}
+
+.xs-text {
+  font-size: 0.7rem;
+}
+
+.smaller-text {
+  font-size: 1.1rem;
+}
+
+.small-text {
+  font-size: 1.5rem;
+}
+.med-text {
+  font-size: 2rem;
+  line-height: 1;
+}
+.big-text {
+  font-size: 4rem;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: rgb(120, 120, 125);
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
+.font-weight-light {
+  font-weight: 200;
+}
+.font-weight-xbold {
+  font-weight: 800;
+}
+/* ------------------------ Header Styles */
+nav a {
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+header a {
+  padding: 0.5rem 0;
+  margin-right: 1rem;
+}
+
+header a:last-child {
+  margin-right: 0;
+}
+
+/* --------Logo Styles -------- */
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+/* ------footer styles------ */
+footer h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer p {
+  margin-bottom: 2rem;
+}
+
+.fa-brands {
+  color: white;
+}
+
+.fa-brands:hover {
+  color: ;
+}
+
+/* ------------ Hamburger Menu Styles */
+.hamburger-button i {
+  font-size: 2rem;
+}
+
+.hamburger-button {
+  text-align: right;
+  padding: 0rem;
+  display: block;
+  cursor: pointer;
+  font-weight: 200;
+  position: sticky;
+  right: 1rem;
+  top: 1rem;
+  z-index: 2;
+}
+
+.hamburger-button.active {
+  color: ;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: ;
+  color: ;
+  padding: 5%;
+  position: fixed;
+  width: 100vh;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.mobile-menu a:hover {
+  font-size: 1.4rem;
+}
+
+/* ---------- Welcome Banner Section */
+header {
+  background-image: url("/images/.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 2% 5%;
+}
+
+header h3 {
+  font-size: 5.5rem;
+  line-height: 1;
+}
+
+/* ------------ Background-images */
+
+
+/* ------ Blog Images ------- */
+.blog-image {
+    width: 60vw;
+}
+
+/* Bckground of gallery when active */
+
+
+/* -------------- Icon Styles */
+/* This is for the testimonial quotes */
+.quote-icon {
+  font-size: 6rem;
+  display: inline-block;
+  color: ;
+  line-height: 1;
+}
+
+
+/* Social media icons on footer */
+.fa-social {
+  text-align: center;
+  padding: 0.3rem;
+  margin: 0 0.2rem;
+  font-size: 2.5rem;
+}
+
+/* ------------Card Styles */
+.card {
+  border: 4px solid lightblue;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+}
+
+.card p {
+    font-size: 0.7rem;
+    line-height: 1.2;
+}
+
+
+/*----------------- Buttons & Forms  */
+input,
+textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.4rem;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: ;
+}
+
+form button {
+  background-color: ;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  border: 2px solid ;
+  border-radius: 3px;
+  width: 100%;
+  padding: 0.5rem 2rem;
+}
+
+form button:hover {
+  background-color: ;
+  color: ;
+  border: 2px solid ;
+}
+
+/* ----Milerlite form ----- */
+
+
+/* align footer flodesk form */
+/* #mlb2-6628347.ml-form-embedContainer .ml-form-align-center form [class*="ff-"] {
+  text-align: right !important;
+} */
+
+/* --------Link/CTA Styles */
+.help-team {
+  text-transform: uppercase;
+  padding: 0.5rem 5rem;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.help-team:hover {
+  background-color: var(--featured);
+  color: var(--dark-text);
+}
+
+/* General CSS Responsive Styles (Apply everywhere unless overridden) */
+
+.show-xs,
+.show-sm,
+.show-md,
+.mobile-menu {
+  display: none;
+}
+
+/* ------- MD Media Query (64em / 1024px) --------------- */
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */
+
+@media (max-width: 64em) {
+  .show-md {
+    display: block;
+  }
+  .hide-md {
+    display: none;
+  }
+
+  .md-tall-80 {
+    min-height: 80vh;
+  }
+}
+
+/* ------- SM Media Query (48em / 768px) --------------- */
+/* - Styles added here will apply at devices smaller than 768px, or zoomed in equivalent */
+
+@media (max-width: 48em) {
+  html {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .sm-text-sm {
+    font-size: 1rem;
+  }
+
+  .show-sm {
+    display: block;
+  }
+  .hide-sm {
+    display: none;
+  }
+
+  .sm-text-center {
+    text-align: center;
+  }
+  .sm-text-left {
+    text-align: left;
+  }
+  .sm-text-right {
+    text-align: right;
+  }
+
+  .sm-padded {
+    padding: 5%;
+  }
+  .sm-padded-1 {
+    padding: 1rem;
+  }
+  .sm-padded-05 {
+    padding: 0.5rem;
+  }
+
+  .sm-padded-t-0 {
+    padding-top: 0;
+  }
+  .sm-padded-b-0 {
+    padding-bottom: 0;
+  }
+  .sm-padded-l-0 {
+    padding-left: 0;
+  }
+  .sm-padded-r-0 {
+    padding-right: 0;
+  }
+
+  .sm-padded-t-10 {
+    padding-top: 10%;
+  }
+
+  .sm-margin-t-0 {
+    margin-top: 0;
+  }
+  .sm-margin-b-0 {
+    margin-bottom: 0;
+  }
+  .sm-margin-l-0 {
+    margin-left: 0;
+  }
+  .sm-margin-r-0 {
+    margin-right: 0;
+  }
+
+  .sm-margin-t-25 {
+    margin-top: 2.5rem;
+  }
+
+  header h3 {
+    font-size: 11vw;
+  }
+
+  header h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ------- XS Media Query (36em / 576px) --------------- */
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */
+
+@media (max-width: 36em) {
+  html {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .show-xs {
+    display: block;
+  }
+  .hide-xs {
+    display: none;
+  }
+
+  .xs-tall-50 {
+    min-height: 50vh;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    line-height: 1.1;
+  }
+
+  .sm-margin-t-3 {
+    margin-top: 3rem;
+  }
+
+  .sm-margin-b-2 {
+    margin-bottom: 1rem;
+  }
+}
+
+/* ------- Optional XXS Media Query (25em / 400px) NOT part of default Gridlex styling--------------- */
+/* - Styles added here will apply at devices smaller than 400px, or zoomed in equivalent */
+
+@media (max-width: 25em) {
+  [class*="grid"] .xxs-stack {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }

@@ -1,7 +1,10 @@
 ---
 layout: post
 title: My first post
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+author: Natalie 
 categories: [travel, bali]
+featured_image: /images/bali.jpg
 ---
 
 ## Adventures in Bali

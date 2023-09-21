@@ -2,21 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <title>{{page.title}}</title>
+    {% include head.html %}
 </head>
 
 <body>
     <header>
-        This is our header
+      <div class="header-nav col-12-top grid left">
+        <div class="col-5_sm-11-middle">
+          <a href="/index.html">
+            <h2 class="logo">Jekyll Basic Blog</h2>
+          </a>
+        </div>
+
+        <nav class="col-7_sm-12-middle right sm-text-center hide-sm">
+          <a href="/index.html"> Home </a>
+          <a href="/about.html"> About </a>
+          <a href="/blog.html"> Blog </a>
+          <a href="/contact.html"> Contact </a>
+        </nav>
+
+        <div class="col-1 show-sm">
+          <div class="hamburger-button">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <nav class="mobile-menu">
+          <a href="/index.html"> Home </a>
+          <a href="/about.html"> About </a>
+          <a href="/blog.html"> Blog </a>
+          <a href="/contact.html"> Contact </a>
+      </nav>
     </header>
 
     {{content}}
 
-    <footer>
+    <footer class="padded-md">
         This is our footer
     </footer>
 </body>

@@ -1,0 +1,17 @@
+---
+layout: default
+title: Blog pag
+---
+
+<section class="grid padded-md">
+    {% for post in site.posts %}
+
+    <div class="col-6_sm-12 padded-1">
+        <div class="bg-image portrait margin-b" style="background-image:url('{{post.featured_image}}')"></div>
+        <h3> {{ post.title }}</h3>
+        <p> {{ post.description }} </p>
+        <a href="{{post.url}}"> Read more </a>
+    </div>
+
+    {% endfor %}
+</section>
