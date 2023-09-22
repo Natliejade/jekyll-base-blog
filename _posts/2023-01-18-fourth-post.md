@@ -5,6 +5,12 @@ description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
 author: Natalie 
 categories: [travel, new zealand]
 featured_image: /images/new-zealand.jpg
+seo: 
+  title:
+  description:
+  social_image:
+  keywords:
+  hide-from-google: false
 ---
 
 ![Hobbiton](/images/new-zealand.jpg){:class="blog-image"}

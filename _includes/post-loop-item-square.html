@@ -1,0 +1,12 @@
+<div class="col-4_sm-12 post-item padded-1">
+    <div class="bg-image square margin-b" style="background-image:url('{{post.featured_image}}')">
+    </div>
+
+    {% for item in post.categories %}
+        <span class="tag"> {{item}} </span>
+    {% endfor %}
+
+    <h2 class="margin-t-1"> {{ post.title }}</h2>
+    <p> {{ post.description }} </p>
+    <a href="{{ post.url }}" class="subtle-button"> Read more </a>
+</div>        

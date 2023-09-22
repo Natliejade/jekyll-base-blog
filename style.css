@@ -16,19 +16,19 @@
 /* Temp Styles */
 header,
 footer {
-    background-color: lightblue;
+    background-color: #F0E6E6;
 }
 
 .intro {
     text-transform: uppercase;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 .side-bar {
-    background-color: lightgrey;    
+    /* background-color: lightgrey;     */
 }
 .back-button {
-    background-color: lightpink;   
+    /* background-color: lightpink;    */
 }
 
 .tag {
@@ -38,6 +38,22 @@ footer {
     display: inline-block;
     margin-top: 0.5rem;
 }
+
+.capped-width {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.capped-width-l {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.capped-width-narrow {
+    max-width: 60vw;
+    margin: auto;
+}
+
 
 /* ---------------------- Universal styles & Utility classes--------------*/
 /* CSS RESET */
@@ -170,6 +186,10 @@ html {
   margin-right: 5%;
 }
 
+.margin-t-05 {
+  margin-top: 0.5rem;
+}
+
 .margin-t-1 {
   margin-top: 1rem;
 }
@@ -259,7 +279,7 @@ p:last-child {
 }
 
 .bg-dark {
-  background-color: ;
+  background-color: #192b37;
   color: white;
 }
 
@@ -362,7 +382,7 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: #b58484;
 }
 
 .featured-text {
@@ -384,7 +404,7 @@ a:hover {
   font-size: 1.5rem;
 }
 .med-text {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1;
 }
 .big-text {
@@ -541,7 +561,7 @@ header h3 {
 
 /* ------------Card Styles */
 .card {
-  border: 4px solid lightblue;
+  /* border: 4px solid lightblue; */
 }
 
 .card h3 {
@@ -610,8 +630,8 @@ form button:hover {
 }
 
 .help-team:hover {
-  background-color: var(--featured);
-  color: var(--dark-text);
+  background-color: ;
+  color: ;
 }
 
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */
